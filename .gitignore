@@ -1,0 +1,13 @@
+.gradle/
+build/
+dist/
+.idea/
+*.iml
+.vscode/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+*.tar.gz
+.tmp/

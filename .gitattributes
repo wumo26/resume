@@ -1,0 +1,9 @@
+* text=auto
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.jpg binary
+*.docx binary
