@@ -75,11 +75,11 @@ export class AppComponent implements AfterViewInit, OnDestroy {
       await navigator.clipboard.writeText(this.email);
       this.copyStatus.set('已複製！');
     } catch {
-      const emailText = this.element.nativeElement.querySelector('.email-address')?.firstChild;
+      const emailElement = this.element.nativeElement.querySelector('.email-address');
       const selection = this.document.getSelection();
-      if (emailText && selection) {
+      if (emailElement && selection) {
         const range = this.document.createRange();
-        range.selectNodeContents(emailText);
+        range.selectNodeContents(emailElement);
         selection.removeAllRanges();
         selection.addRange(range);
         this.copyStatus.set('已選取信箱，請長按或按 Ctrl/Cmd+C 複製');

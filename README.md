@@ -29,7 +29,9 @@ npm test
 
 手動維護的前端程式都在 `frontend/src/`，使用 `.ts`。舊的 `src/main/resources/static/script.js` 和重複首頁已移除。瀏覽器執行的 `main-*.js` 等檔案由 Angular 自動編譯產生，請勿直接修改建置產物。
 
-`src/main/resources/static/` 現在只保留共用 CSS、照片、履歷下載和圖示。正式版在 `dist/`，請透過 HTTP 網站服務開啟；開發時直接使用 `ng serve` 或下方的 Spring Boot。
+`src/main/resources/static/` 現在只保留共用 SCSS、照片、履歷下載和圖示。修改 `styles.scss` 中對應區塊的規則即可；共用尺寸與中斷點集中在檔案頂端，手機、平板及列印規則集中在檔案末段。Angular 會將 SCSS 編譯成 CSS，請勿直接修改 `dist/` 的產物。
+
+正式版在 `dist/`，請透過 HTTP 網站服務開啟；開發時直接使用 `ng serve` 或下方的 Spring Boot。
 
 ## 使用 Java 啟動同一份前端
 

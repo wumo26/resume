@@ -1,150 +1,519 @@
-:root{--paper:#f3f3f3;--ink:#222;--muted:#565656;--line:#bdbdbd;--yellow:#eea302;--red:#ff3b25;--blue:#80d8da;--ice:#c5d8e4;--mist:#b7c9da;--slate:#a9bccb;font-family:Arial,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:36px}body{margin:0;font-size:16px;line-height:1.8}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible{outline:3px solid #2459a6;outline-offset:5px}p,h1,h2,h3,figure{margin:0}a:hover{text-decoration:underline;text-underline-offset:5px}.container{max-width:980px;width:calc(100% - 64px);margin-inline:auto}.sr-only,.skip-link:not(:focus){position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link:focus{position:fixed;z-index:20;top:10px;left:10px;background:white;padding:10px}
-.site-header{padding:30px 42px}.nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative}.brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.brand:hover{text-decoration:none}.brand-dot{width:16px;height:16px;border-radius:50%;background:#839fb5}.brand strong{font-size:23px;letter-spacing:1px}.brand-role{font-size:14px;margin-left:4px}.navigation{display:flex;align-items:center}.navigation a{line-height:1.2;padding:0 22px;font-size:15px}.navigation a+a{border-left:1px solid var(--ink)}.navigation a:hover,.navigation a.active{color:#8b5c00;text-decoration:none}.menu-toggle{display:none}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center;min-height:0;padding-block:65px 40px}.portrait-circle{aspect-ratio:1;border-radius:50%;overflow:hidden;background:#fff;width:65%;max-width:280px;margin-inline:auto}.portrait-circle img{display:block;width:92%;height:auto;max-width:none;margin:4% auto 0}.hero-copy h1{font-size:100px;letter-spacing:-5px;font-weight:700;line-height:1.05;margin-bottom:28px}.hero-copy h2{font-size:23px;line-height:1.5;margin-bottom:10px}.hero-copy>p{font-size:16px;line-height:1.85;max-width:420px}.circle-links{display:flex;gap:14px;margin-top:30px}.circle-link{display:flex;align-items:center;justify-content:center;aspect-ratio:1;flex:1;border:0;border-radius:50%;font-size:20px;font-weight:700;max-width:108px;transition:background .2s}.circle-link:hover{background:var(--paper);text-decoration:none}.circle-resume{background:var(--ice)}.circle-skills{background:var(--mist)}.circle-contact{background:var(--slate)}
-.intro-strip{border-top:1px solid var(--line);margin:0 42px;display:grid;grid-template-columns:1fr 1.5fr 1fr auto;gap:24px;padding:32px 0 38px;align-items:start}.intro-strip>div{display:flex;flex-direction:column}.intro-strip strong{font-size:18px;margin-bottom:4px}.intro-strip a,.intro-strip span{font-size:14px}.download-link{border-bottom:1px solid var(--ink);padding:4px 0;align-self:center}.download-link span{margin-left:22px}
-.section{padding-block:85px;border-top:1px solid var(--line)}.about-section{display:grid;grid-template-columns:1fr 1.65fr;gap:70px;margin-top:0;padding-top:48px}.eyebrow{font-size:13px;letter-spacing:1.5px;color:var(--muted);margin-bottom:14px}.section h2{font-size:40px;line-height:1.3;letter-spacing:-1px}.section-caption{margin-top:20px;font-size:14px}.about-content p+p{margin-top:18px}.about-content strong{font-weight:600}.interest-tags{display:flex;flex-wrap:wrap;gap:20px;margin-top:24px;font-size:14px}.interest-tags i{font-style:normal;color:var(--muted);margin-right:5px}.experience-section{max-width:980px;width:calc(100% - 64px);margin:auto}.experience-section>.container{width:100%}.section-top{margin-bottom:45px}.journey-row{display:grid;grid-template-columns:1fr;gap:24px;padding:32px 0;border-bottom:1px solid #d5d5d5}.journey-row:last-child{border-bottom:0;padding-bottom:0}.row-number{color:var(--muted);font-size:14px;padding-top:3px}.journey-arrow,.skill-icon,.small-tags,.card-label+.skill-card-top{display:none}.journey-title{display:flex;justify-content:space-between;gap:24px;margin-bottom:15px}.journey-category{font-size:14px;color:var(--muted);margin-bottom:5px}.journey-title h3{font-size:22px;line-height:1.5}.journey-title h3 span{display:block;font-size:17px;font-weight:400;margin-top:4px}.journey-duration{font-size:14px;white-space:nowrap}.journey-body>p{max-width:650px;color:var(--muted)}
-.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}.skill-card{border-top:2px solid var(--ink);padding-top:20px}.skill-card-top{display:flex;justify-content:space-between;gap:10px;font-size:13px}.card-label{font-size:13px;letter-spacing:1px}.skill-card-top>span{color:var(--muted)}.skill-card h3{font-size:24px;line-height:1.5;margin:24px 0 16px}.skill-card h3 br{display:none}.skill-card>p{color:var(--muted);overflow-wrap:anywhere}.card-detail{margin-top:24px;display:flex;flex-direction:column;gap:6px;font-size:14px}.card-detail>span{color:var(--muted)}.card-detail strong{font-weight:500}.language-panel{margin-top:56px;padding-top:34px;border-top:1px solid var(--line);display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}.language-heading h3{font-size:21px;margin:10px 0}.language-heading>p:last-child{font-size:14px;color:var(--muted)}.language-score>span{font-size:14px}.language-score p{display:flex;align-items:baseline;gap:10px}.language-score strong{font-size:48px;font-weight:500;line-height:1.6}.language-score p>span{font-size:14px}.additional-info{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin-top:30px}.additional-info>span:first-child{font-weight:700}
-.contact-section{border-top:1px solid var(--line);max-width:980px;width:calc(100% - 64px);margin:auto;padding-block:75px 90px}.contact-section>.container{width:100%}.contact-masthead .eyebrow{margin-bottom:8px}.contact-display{font-size:40px;font-weight:700;letter-spacing:-1px;line-height:1.3;margin-bottom:32px}.contact-content{display:grid;grid-template-columns:1fr 1.25fr;gap:60px}.contact-copy h2{font-size:26px;margin-bottom:14px}.contact-copy>p{max-width:360px}.button{display:inline-flex;align-items:center;gap:34px;border-bottom:1px solid var(--ink);margin-top:24px;padding-bottom:5px}.contact-details{display:grid;gap:22px}.contact-item{display:flex;flex-direction:column;align-items:flex-start}.contact-item>span:first-child{font-size:13px;letter-spacing:1px;color:var(--muted)}.contact-item>a{font-size:18px;overflow-wrap:anywhere;max-width:100%}.copy-email{background:none;border:0;border-bottom:1px solid var(--ink);padding:0;margin-top:8px;font-size:14px;cursor:pointer}.copy-status{font-size:14px;margin-top:4px}.copy-status:empty{display:none}.location-item p{font-size:16px}.site-footer{margin:0 42px;border-top:1px solid var(--line);padding:28px 0}.footer-content{width:100%;max-width:none;display:flex;align-items:center;justify-content:space-between;gap:25px;font-size:14px}.footer-brand{font-weight:700}.footer-brand span{font-size:12px;letter-spacing:1px;font-weight:400;margin-left:14px}.back-top span{margin-left:15px}
+// 共用尺寸與中斷點。各區規則集中管理，避免在檔案尾端重複覆寫。
+$tablet: 900px;
+$mobile: 600px;
+$content-width: 980px;
+$details-width: 700px;
 
-@media(max-width:900px){.site-header{padding:24px}.brand-role{display:none}.container,.experience-section,.contact-section{width:calc(100% - 48px)}.hero{gap:28px;min-height:0;padding-block:48px 32px}.hero-copy h1{font-size:78px}.circle-links{gap:10px}.circle-link{font-size:19px}.intro-strip{margin-inline:24px;grid-template-columns:1fr 1.4fr;row-gap:20px}.about-section{gap:35px;grid-template-columns:1fr 1.5fr}.skills-grid{gap:22px}.contact-content{gap:40px}.site-footer{margin-inline:24px}}
-@media(max-width:600px){.site-header{padding:22px 20px}.brand{gap:9px}.brand strong{font-size:21px}.brand-dot{width:14px;height:14px}.menu-toggle{display:flex;width:42px;height:42px;flex-direction:column;justify-content:center;gap:6px;background:transparent;border:0;padding:9px;cursor:pointer}.menu-toggle span{height:1px;width:24px;background:var(--ink)}.navigation{display:none;position:absolute;top:54px;right:0;left:0;z-index:10;background:var(--paper);border:1px solid var(--line);padding:22px;justify-content:center}.navigation.is-open{display:flex}.navigation a{padding-inline:20px}.container,.experience-section,.contact-section{width:calc(100% - 40px)}.hero{grid-template-columns:1fr;gap:34px;padding-block:32px 28px;min-height:0;max-width:420px}.portrait-circle{width:min(65%,200px);margin:auto}.hero-copy h1{font-size:76px;margin-bottom:20px}.hero-copy h2{font-size:22px}.hero-copy>p{line-height:1.85}.circle-links{gap:12px;margin-top:24px}.circle-link{max-width:92px;font-size:18px}.intro-strip{margin-inline:20px;grid-template-columns:1fr;padding-block:26px;gap:18px}.download-link{justify-self:start}.section{padding-block:48px}.about-section{grid-template-columns:1fr;gap:25px;margin-top:0;padding-top:32px}.section h2{font-size:32px}.section-caption{margin-top:10px}.section-top{margin-bottom:26px}.journey-row{grid-template-columns:1fr;gap:12px;padding-block:25px}.journey-title{flex-direction:column;gap:10px}.journey-title h3{font-size:21px}.journey-duration{white-space:normal}.skills-grid{grid-template-columns:1fr;gap:32px}.skill-card h3{margin-top:14px}.card-detail{margin-top:16px}.language-panel{grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}.language-heading{grid-column:1/-1}.language-score strong{font-size:42px}.additional-info{gap:8px 12px}.contact-section{padding-block:48px}.contact-display{font-size:32px}.contact-content{grid-template-columns:1fr;gap:32px}.site-footer{margin-inline:20px}.footer-content{flex-wrap:wrap;gap:14px}.footer-content>p{display:none}.footer-brand span{display:block;margin-left:0}.contact-item>a{font-size:17px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-@media print{body{background:white;font-size:11pt}.site-header,.circle-links,.intro-strip,.site-footer,.copy-email,.button,.skip-link{display:none}.container,.experience-section,.contact-section{width:100%;max-width:none}.hero{min-height:0;padding:15px 0;grid-template-columns:150px 1fr;gap:30px}.hero-copy h1{font-size:40px;margin-bottom:10px}.hero-copy h2{font-size:18px}.portrait-circle{width:150px}.section,.contact-section{padding-block:25px;margin-top:0}.about-section{gap:25px}.journey-row,.skill-card,.contact-content{break-inside:avoid}.contact-display{font-size:32px}.contact-content{gap:30px}.section h2{font-size:24px}.copy-status{display:none}}
-.email-row{display:flex;align-items:baseline;gap:14px;max-width:100%;padding-bottom:4px}.email-address,.contact-value{font-size:18px}.email-address{overflow-wrap:anywhere;min-width:0}.email-row .copy-email{margin-top:0;flex-shrink:0;font-size:14px;border-bottom:0}.contact-details{min-width:0}@media(max-width:380px){.email-row{gap:8px}.email-address{font-size:16px}.email-row .copy-email{font-size:13px}}
-/* 統一各區塊的閱讀節奏 */
-.hero{grid-template-columns:minmax(190px,.7fr) minmax(0,1.3fr);gap:48px;padding-block:52px}
-.portrait-circle{width:100%;max-width:230px}
-.hero-copy h2,.section h2{font-size:32px;line-height:1.35;letter-spacing:0;margin:0 0 14px}
-.hero-copy>p{max-width:520px;line-height:1.8}
-.circle-links{gap:10px;margin-top:24px}
-.circle-link{max-width:88px;font-size:17px}
-.section,.contact-section{max-width:980px;width:calc(100% - 64px);margin-inline:auto;padding-block:64px;border-top:1px solid var(--line)}
-.about-section{grid-template-columns:1fr 1.65fr;gap:64px;margin-top:0;padding-top:64px}
-.section-top{margin-bottom:32px}
-.section-caption{margin-top:10px;color:var(--muted)}
-.journey-row{padding-block:26px;gap:0}
-.journey-title{margin-bottom:10px}
-.skills-grid{gap:28px}
-.skill-card{border-top:1px solid var(--line);padding-top:18px}
-.skill-card h3{font-size:22px;margin:16px 0 12px}
-.card-detail{margin-top:18px}
-.language-panel{margin-top:40px;padding-top:28px}
-.contact-section{padding-bottom:64px}
-.contact-section .section-top{margin-bottom:28px}
-.contact-details{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-.contact-item{gap:5px}
-.email-address,.contact-value{font-size:17px}
-.location-item p{font-size:17px}
-.site-footer{padding-block:24px}
-
-@media(max-width:900px){
-  .hero{grid-template-columns:.75fr 1.25fr;gap:36px;padding-block:44px}
-  .section,.contact-section{width:calc(100% - 48px);padding-block:56px}
-  .about-section{gap:40px;padding-top:56px}
-  .contact-details{gap:20px}
+:root {
+  --paper: #f3f3f3;
+  --ink: #222;
+  --muted: #565656;
+  --line: #bdbdbd;
+  --ice: #c5d8e4;
+  --mist: #b7c9da;
+  --slate: #a9bccb;
+  font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
 }
-@media(max-width:600px){
-  .hero{grid-template-columns:1fr;gap:26px;padding-block:32px}
-  .portrait-circle{max-width:190px}
-  .hero-copy h2,.section h2{font-size:30px;margin-bottom:12px}
-  .circle-links{margin-top:20px}
-  .circle-link{max-width:82px;font-size:16px}
-  .section,.contact-section{width:calc(100% - 40px);padding-block:48px}
-  .about-section{grid-template-columns:1fr;gap:24px;padding-top:48px}
-  .section-top{margin-bottom:24px}
-  .journey-row{padding-block:22px}
-  .skills-grid{gap:26px}
-  .language-panel{margin-top:32px}
-  .contact-details{grid-template-columns:1fr;gap:20px}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 36px; }
+body { margin: 0; font-size: 16px; line-height: 1.8; }
+p, h1, h2, h3, figure { margin: 0; }
+button { font: inherit; color: inherit; }
+a, button { -webkit-tap-highlight-color: transparent; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; text-underline-offset: 5px; }
 }
-@media print{
-  .hero-copy h2,.section h2{font-size:24px}
+
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #2459a6;
+  outline-offset: 5px;
 }
-.skills-section{border-top:0}
-.about-section{grid-template-columns:220px minmax(0,1fr);gap:40px}
-@media(max-width:900px){.about-section{grid-template-columns:190px minmax(0,1fr);gap:32px}}
-.about-section .interest-tags{display:flex;flex-direction:column;gap:3px;margin-top:12px;color:var(--muted);font-size:14px;line-height:1.6}.about-section .interest-tags span{font-weight:400}
-@media(max-width:600px){.about-section .interest-tags{margin-top:10px;gap:2px;font-size:14px}}
-.hero{grid-template-columns:240px minmax(0,1fr);gap:48px}
-.portrait-circle{max-width:220px;margin-inline:0}
-.hero-copy{max-width:620px}
-@media(max-width:900px){.hero{grid-template-columns:210px minmax(0,1fr);gap:36px}.portrait-circle{max-width:200px}}
-@media(max-width:600px){.hero{grid-template-columns:1fr;gap:26px}.portrait-circle{margin-inline:auto;max-width:190px}}
-.about-section{display:block}
-.about-section .about-content{max-width:880px;margin-top:28px}
-@media(max-width:600px){.about-section .about-content{margin-top:22px}}
-.hero{grid-template-columns:220px minmax(0,520px);justify-content:center;gap:64px}
-.circle-links{justify-content:center;gap:20px}
-@media(max-width:900px){.hero{grid-template-columns:210px minmax(0,1fr);justify-content:initial;gap:40px}.circle-links{justify-content:flex-start;gap:16px}}
-@media(max-width:600px){.hero{grid-template-columns:1fr;gap:26px}.circle-links{justify-content:center;gap:16px}}
-.experience-section{border-bottom:1px solid var(--line)}
-.experience-section .journey-row{border-bottom:0}
-.skills-section{border-bottom:1px solid var(--line)}
-.skills-section .skill-card,.skills-section .language-panel{border-top:0}
-.contact-section{border-top:0}
-.download-link{border-bottom-color:rgba(34,34,34,.32)}
-.download-link span{margin-left:7px}
-.download-link{border-bottom:0;padding:0;text-decoration:none}
-.download-link span{margin-left:6px}
-.download-link:hover,.download-link:focus-visible{text-decoration:underline;text-underline-offset:5px}
-.skills-grid{grid-template-columns:1fr;gap:30px;max-width:700px}
-.skill-card{max-width:700px}
-.skill-card h3{font-size:22px;line-height:1.5;margin:10px 0}
-.skill-card>p{max-width:650px}
-.card-detail{margin-top:12px}
-.language-panel{display:grid;grid-template-columns:1fr;gap:18px;max-width:700px;margin-top:32px;padding-top:0}
-.language-heading{display:grid;gap:6px}
-.language-score{display:flex;align-items:baseline;gap:20px}
-.language-score p{gap:8px}
-.language-score strong{font-size:24px;line-height:1.5}
-.additional-info{max-width:700px;margin-top:24px}
-.contact-details{grid-template-columns:1fr;max-width:700px;gap:20px}
-@media(max-width:600px){.skills-grid{gap:26px}.language-panel{gap:16px}.language-score{gap:14px}}
-.skills-section .skill-card-top{margin-bottom:4px}
-.skills-section .card-label{font-size:14px;letter-spacing:0;color:var(--muted);font-weight:400}
-.skills-section .skill-card h3{font-size:22px;font-weight:600;letter-spacing:0;line-height:1.45;margin:8px 0 10px}
-.skills-section .skill-card>p{font-size:16px;line-height:1.8;color:var(--muted)}
-.skills-section .card-detail{display:grid;grid-template-columns:108px minmax(0,1fr);gap:12px;margin-top:14px;font-size:14px;line-height:1.7}
-.skills-section .card-detail>span{color:var(--muted)}
-.skills-section .card-detail strong{font-weight:400}
-.skills-section .language-heading{gap:4px}
-.skills-section .language-heading>p:last-child{font-size:14px;line-height:1.7}
-.skills-section .language-score{display:grid;grid-template-columns:108px auto;gap:12px;align-items:baseline}
-.skills-section .language-score>span{font-size:14px;color:var(--muted)}
-.skills-section .language-score strong{font-size:22px;font-weight:500}
-.skills-section .language-score p>span{font-size:14px}
-.skills-section .additional-info{font-size:14px;color:var(--muted)}
-.skills-section .additional-info>span:first-child{color:var(--ink);font-weight:500}
-@media(max-width:600px){.skills-section .card-detail,.skills-section .language-score{grid-template-columns:1fr;gap:3px}.skills-section .skill-card h3{font-size:21px}}
-.skills-section .language-heading h3{font-size:22px;font-weight:600;letter-spacing:0;line-height:1.45;margin:0 0 10px}
-@media(max-width:600px){.skills-section .language-heading h3{font-size:21px}}
 
-/* 語言能力與其他資格採用一致的直向資訊層級 */
-.skills-section .language-score{display:flex;align-items:baseline;gap:12px}
-.skills-section .language-score>span{display:block;margin:0}
-.skills-section .language-score p{display:flex;align-items:baseline;gap:6px;margin:0}
-.skills-section .language-score strong{font-size:16px;font-weight:400;line-height:1.7}
-.skills-section .qualifications-panel{max-width:700px;margin-top:28px}
-.skills-section .qualifications-panel h3{font-size:22px;font-weight:600;letter-spacing:0;line-height:1.45;margin:0 0 10px}
-.skills-section .qualifications-panel p{margin:0;color:var(--muted);font-size:16px;line-height:1.8}
-.skills-section .qualifications-panel p+p{margin-top:4px}
-@media(max-width:600px){.skills-section .qualifications-panel h3{font-size:21px}}
+.container {
+  max-width: $content-width;
+  width: calc(100% - 64px);
+  margin-inline: auto;
+}
 
-.skills-section .skill-card:nth-child(2) .card-detail{display:block}
-.skills-section .skill-card:nth-child(2) .card-detail>span,
-.skills-section .skill-card:nth-child(2) .card-detail strong{display:block}
-.skills-section .skill-card:nth-child(2) .card-detail strong{margin-top:4px}
+.sr-only, .skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
-/* 技能、語言與資格維持相同的閱讀寬度與間距 */
-.skills-section .skills-grid{gap:34px}
-.skills-section .skill-card{padding-bottom:2px}
-.skills-section .language-panel{margin-top:38px;gap:16px}
-.skills-section .language-heading{margin-bottom:2px}
-.skills-section .language-score{min-height:28px}
-.skills-section .qualifications-panel{margin-top:34px}
-@media(max-width:600px){
-  .skills-section .skills-grid{gap:28px}
-  .skills-section .language-panel{margin-top:32px;gap:14px}
-  .skills-section .qualifications-panel{margin-top:30px}
+.skip-link:focus {
+  position: fixed;
+  z-index: 20;
+  top: 10px;
+  left: 10px;
+  background: white;
+  padding: 10px;
+}
+
+// 頁首與導覽
+.site-header { padding: 30px 42px; }
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  &:hover { text-decoration: none; }
+  strong { font-size: 23px; letter-spacing: 1px; }
+}
+
+.brand-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #839fb5;
+}
+
+.brand-role { font-size: 14px; margin-left: 4px; }
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  a {
+    line-height: 1.2;
+    padding: 0 22px;
+    font-size: 15px;
+
+    & + a { border-left: 1px solid var(--ink); }
+    &:hover, &.active { color: #8b5c00; text-decoration: none; }
+  }
+}
+
+.menu-toggle { display: none; }
+
+// 照片與圓形導覽
+.hero {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 520px);
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  min-height: 0;
+  padding-block: 52px;
+}
+
+.portrait-circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  max-width: 220px;
+  margin-inline: 0;
+
+  img {
+    display: block;
+    width: 92%;
+    height: auto;
+    max-width: none;
+    margin: 4% auto 0;
+  }
+}
+
+.hero-copy {
+  max-width: 620px;
+
+  h1 {
+    font-size: 100px;
+    letter-spacing: -5px;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 28px;
+  }
+}
+
+.circle-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.circle-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  flex: 1;
+  border: 0;
+  border-radius: 50%;
+  font-size: 17px;
+  font-weight: 700;
+  max-width: 88px;
+  transition: background .2s;
+
+  &:hover { background: var(--paper); text-decoration: none; }
+}
+
+.circle-resume { background: var(--ice); }
+.circle-skills { background: var(--mist); }
+.circle-contact { background: var(--slate); }
+
+// 內容區塊與經歷
+.section {
+  max-width: $content-width;
+  width: calc(100% - 64px);
+  margin-inline: auto;
+  padding-block: 64px;
+  border-top: 1px solid var(--line);
+
+  h2 {
+    font-size: 32px;
+    line-height: 1.35;
+    letter-spacing: 0;
+    margin: 0 0 14px;
+  }
+}
+
+.section-top { margin-bottom: 32px; }
+.about-section { display: block; margin-top: 0; }
+
+.about-content {
+  max-width: 880px;
+  margin-top: 28px;
+
+  p + p { margin-top: 18px; }
+  strong { font-weight: 600; }
+}
+
+.experience-section {
+  margin-block: auto;
+  border-bottom: 1px solid var(--line);
+
+  > .container { width: 100%; }
+}
+
+.journey-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  padding: 26px 0;
+
+  &:last-child { padding-bottom: 0; }
+}
+
+.journey-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 10px;
+
+  h3 { font-size: 22px; line-height: 1.5; }
+}
+
+.journey-body > p { max-width: 650px; color: var(--muted); }
+
+// 技能、證照與資格
+.skills-section {
+  border-top: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 34px;
+  max-width: $details-width;
+}
+
+.skill-card {
+  max-width: $details-width;
+  padding-top: 18px;
+  padding-bottom: 2px;
+
+  > p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+
+  h3 { margin: 8px 0 10px; }
+}
+
+.skill-card h3, .language-heading h3, .qualifications-panel h3 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.45;
+}
+
+.card-detail {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.7;
+
+  > span { color: var(--muted); }
+  strong { font-weight: 400; }
+
+  &--stacked {
+    display: block;
+
+    > span, strong { display: block; }
+    strong { margin-top: 4px; }
+  }
+}
+
+.language-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: $details-width;
+  margin-top: 38px;
+}
+
+.language-heading {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 2px;
+
+  h3 { margin: 0 0 10px; }
+  > p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+}
+
+.language-score {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-height: 28px;
+
+  > span { display: block; margin: 0; font-size: 14px; color: var(--muted); }
+
+  p {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    margin: 0;
+
+    > span { font-size: 14px; }
+  }
+
+  strong { font-size: 16px; font-weight: 400; line-height: 1.7; }
+}
+
+.qualifications-panel {
+  max-width: $details-width;
+  margin-top: 34px;
+
+  h3 { margin: 0 0 10px; }
+  p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+  p + p { margin-top: 4px; }
+}
+
+// 聯絡資訊與信箱複製
+.contact-section {
+  margin-block: auto;
+  border-top: 0;
+
+  .section-top { margin-bottom: 28px; }
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: $details-width;
+  min-width: 0;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+
+  > span:first-child { font-size: 13px; letter-spacing: 1px; color: var(--muted); }
+}
+
+.email-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  max-width: 100%;
+  padding-bottom: 4px;
+
+  .copy-email {
+    background: none;
+    border: 0;
+    padding: 0;
+    margin-top: 0;
+    flex-shrink: 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.email-address { font-size: 17px; overflow-wrap: anywhere; min-width: 0; }
+.location-item p { font-size: 17px; }
+
+.copy-status {
+  font-size: 14px;
+  margin-top: 4px;
+
+  &:empty { display: none; }
+}
+
+// 頁尾
+.site-footer {
+  margin: 0 42px;
+  border-top: 1px solid var(--line);
+  padding: 24px 0;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 14px;
+}
+
+.download-link {
+  border-bottom: 0;
+  padding: 0;
+  align-self: center;
+  text-decoration: none;
+
+  span { margin-left: 6px; }
+  &:hover, &:focus-visible { text-decoration: underline; text-underline-offset: 5px; }
+}
+
+.back-top span { margin-left: 15px; }
+
+// 平板
+@media (max-width: $tablet) {
+  .site-header { padding: 24px; }
+  .brand-role { display: none; }
+  .container, .section { width: calc(100% - 48px); }
+  .section { padding-block: 56px; }
+  .hero {
+    grid-template-columns: 210px minmax(0, 1fr);
+    justify-content: initial;
+    gap: 40px;
+    padding-block: 44px;
+  }
+  .hero-copy h1 { font-size: 78px; }
+  .portrait-circle { max-width: 200px; }
+  .circle-links { justify-content: flex-start; gap: 16px; }
+  .site-footer { margin-inline: 24px; }
+}
+
+// 手機
+@media (max-width: $mobile) {
+  .site-header { padding: 22px 20px; }
+  .brand { gap: 9px; }
+  .brand strong { font-size: 21px; }
+  .brand-dot { width: 14px; height: 14px; }
+
+  .menu-toggle {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: transparent;
+    border: 0;
+    padding: 9px;
+    cursor: pointer;
+
+    span { height: 1px; width: 24px; background: var(--ink); }
+  }
+
+  .navigation {
+    display: none;
+    position: absolute;
+    top: 54px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 22px;
+    justify-content: center;
+
+    &.is-open { display: flex; }
+    a { padding-inline: 20px; }
+  }
+
+  .container, .section { width: calc(100% - 40px); }
+  .hero { grid-template-columns: 1fr; gap: 26px; padding-block: 32px; max-width: 420px; }
+  .portrait-circle { margin: auto; max-width: 190px; }
+  .hero-copy h1 { font-size: 76px; margin-bottom: 20px; }
+  .circle-links { justify-content: center; margin-top: 20px; }
+  .circle-link { max-width: 82px; font-size: 16px; }
+  .section { padding-block: 48px; }
+  .section h2 { font-size: 30px; margin-bottom: 12px; }
+  .about-content { margin-top: 22px; }
+  .section-top { margin-bottom: 24px; }
+  .journey-row { padding-block: 22px; }
+  .journey-title { flex-direction: column; gap: 10px; }
+  .journey-title h3 { font-size: 21px; }
+  .skills-grid { gap: 28px; }
+  .skill-card h3, .language-heading h3, .qualifications-panel h3 { font-size: 21px; }
+  .card-detail { grid-template-columns: 1fr; gap: 3px; }
+  .language-panel { margin-top: 32px; gap: 14px; }
+  .language-heading { grid-column: 1 / -1; }
+  .qualifications-panel { margin-top: 30px; }
+  .site-footer { margin-inline: 20px; }
+  .footer-content { flex-wrap: wrap; gap: 14px; }
+  .download-link { justify-self: start; }
+}
+
+@media (max-width: 380px) {
+  .email-row { gap: 8px; }
+  .email-row .copy-email { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+// 列印：保留履歷內容，隱藏導覽及互動控制。
+@media print {
+  body { background: white; font-size: 11pt; }
+  .site-header, .circle-links, .site-footer, .copy-email, .skip-link, .copy-status { display: none; }
+  .hero.container { width: 100%; max-width: none; }
+  .experience-section > .container { max-width: none; }
+  .footer-content { width: 100%; }
+  .hero-copy h1 { font-size: 40px; margin-bottom: 10px; }
+  .section { margin-top: 0; }
+  .section h2 { font-size: 24px; }
+  .journey-row, .skill-card { break-inside: avoid; }
 }

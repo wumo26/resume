@@ -52,13 +52,14 @@ describe('Resume interactions', () => {
     expect(document.activeElement).toBe(toggle);
   });
 
-  it('copies the correct address and announces success only after the write resolves', async () => {
+  it('copies the displayed address and announces success', async () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
     vi.stubGlobal('isSecureContext', true);
     Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText } });
     await fixture.componentInstance.copyEmail();
     fixture.detectChanges();
     expect(writeText).toHaveBeenCalledWith('wupsnmo26@gmail.com');
+    expect(page.querySelector('.email-address')?.textContent).toBe(fixture.componentInstance.email);
     expect(page.querySelector('[role="status"]')!.textContent).toContain('已複製');
   });
 
