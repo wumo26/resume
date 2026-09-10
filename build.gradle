@@ -28,9 +28,38 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-tasks.register('exportSite', Sync) {
-    description = 'Export the standalone website for static hosting.'
+def npmExecutable = providers.gradleProperty('npmExecutable')
+        .orElse(System.getProperty('os.name').toLowerCase().contains('windows') ? 'npm.cmd' : 'npm')
+
+tasks.register('buildFrontend', Exec) {
+    description = 'Build the shared Angular TypeScript frontend.'
     group = 'build'
-    from 'src/main/resources/static'
-    into 'dist'
+    workingDir projectDir
+    if (System.getProperty('os.name').toLowerCase().contains('windows')) {
+        commandLine 'cmd', '/c', npmExecutable.get(), 'run', 'build'
+    } else {
+        commandLine npmExecutable.get(), 'run', 'build'
+    }
+}
+
+// Original files under static/ are Angular build inputs, not a second application.
+sourceSets.main.resources.exclude 'static/**'
+
+tasks.named('processResources') {
+    dependsOn 'buildFrontend'
+    inputs.dir layout.projectDirectory.dir('dist')
+    doLast {
+        project.sync {
+            from project.layout.projectDirectory.dir('dist').asFile
+            into project.layout.buildDirectory.dir('resources/main/static').get().asFile
+        }
+    }
+}
+
+tasks.register('exportSite', Sync) {
+    description = 'Export the compiled Angular website for static hosting.'
+    group = 'build'
+    dependsOn 'buildFrontend'
+    from 'dist'
+    into 'build/static-site'
 }
