@@ -75,7 +75,7 @@ $env:PORT = '8081'
 | `frontend/src/app/app.component.html` | Angular 履歷內容 |
 | `frontend/src/app/app.component.ts` | Angular 選單、區塊導覽、信箱複製 |
 | `frontend/src/app/app.component.spec.ts` | Angular 互動測試 |
-| `src/main/resources/static/styles.css` | 桌面、手機、列印版面 |
+| `src/main/resources/static/styles.scss` | 桌面、手機、列印版面 |
 | `src/main/resources/static/assets/portrait.jpg` | 從原始履歷取出的照片 |
 | `src/main/resources/static/assets/resume.docx` | 可下載的原始履歷 |
 | `src/main/resources/static/favicon.svg` | 瀏覽器分頁圖示 |

@@ -21,7 +21,7 @@
               { "glob": "**/*", "input": "src/main/resources/static/assets", "output": "assets" },
               { "glob": "favicon.svg", "input": "src/main/resources/static", "output": "/" }
             ],
-            "styles": ["src/main/resources/static/styles.css"]
+            "styles": ["src/main/resources/static/styles.scss"]
           },
           "configurations": {
             "production": {
