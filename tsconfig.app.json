@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "outDir": "./build/typescript/app", "types": [] },
+  "files": ["frontend/src/main.ts"],
+  "include": ["frontend/src/**/*.d.ts"]
+}

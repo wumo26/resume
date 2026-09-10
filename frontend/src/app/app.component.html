@@ -1,0 +1,146 @@
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header">
+    <div class="nav-wrap">
+        <a class="brand" href="#home" aria-label="吳柏勳，回到首頁"><span class="brand-dot"
+                                                                         aria-hidden="true"></span><strong>吳柏勳</strong><span
+                class="brand-role">個人履歷</span></a>
+        <button class="menu-toggle" type="button" [attr.aria-expanded]="menuOpen()" aria-controls="navigation"
+                [attr.aria-label]="menuOpen() ? '關閉導覽選單' : '開啟導覽選單'" (click)="toggleMenu()">
+            <span></span><span></span></button>
+        <nav class="navigation" [class.is-open]="menuOpen()" id="navigation" aria-label="主要導覽"
+             (click)="closeMenu()">
+            <a href="#experience" [class.active]="activeSection() === 'experience'">經歷</a>
+            <a href="#skills" [class.active]="activeSection() === 'skills'">技能</a>
+            <a href="#contact" [class.active]="activeSection() === 'contact'">聯絡資訊</a>
+        </nav>
+    </div>
+</header>
+
+<main id="main">
+    <section class="hero container" id="home" aria-labelledby="hero-title">
+        <figure class="portrait-circle"><img src="assets/portrait.jpg" alt="吳柏勳的個人照片" width="2756" height="3543"
+                                             fetchpriority="high"></figure>
+        <div class="hero-copy">
+            <h1 id="hero-title" class="sr-only">吳柏勳個人履歷</h1>
+            <div class="circle-links" aria-label="探索我的履歷">
+                <a class="circle-link circle-resume" href="#experience">經歷</a>
+                <a class="circle-link circle-skills" href="#skills">技能</a>
+                <a class="circle-link circle-contact" href="#contact">聯絡</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-section container" id="about" aria-labelledby="about-title">
+        <div class="section-heading"><h2 id="about-title">關於我</h2></div>
+        <div class="about-content">
+
+            <p>我是吳柏勳，畢業於美和科技大學資訊管理系。目前希望朝<strong>程式開發及軟體資訊相關領域</strong>發展。</p>
+            <p>
+                在學期間修習程式語言與資料管理相關課程，建立資訊應用基礎；實習期間累積影片剪輯與圖片設計經驗。畢業後具三年公家機關工作經驗；在校時曾擔任社團公關與班級幹部，累積溝通與合作經驗。</p>
+            <p>從課堂學習到實際工作，我持續精進程式設計能力，期待將所學運用於實際工作。</p>
+        </div>
+    </section>
+
+    <section class="experience-section section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+            <div class="section-top">
+                <div><h2 id="experience-title">經歷</h2></div>
+            </div>
+            <div class="journey">
+                <article class="journey-row">
+                    <div class="journey-body">
+                        <div class="journey-title">
+                            <div><h3>公家機關職員 - 三年工作經驗</h3></div>
+                        </div>
+                        <p>累積三年公家機關工作經驗，持續朝程式開發及軟體資訊領域發展。</p>
+                        <div class="small-tags"><span>公家機關</span><span>職場經驗</span></div>
+                    </div>
+                    <span class="journey-arrow" aria-hidden="true">↗</span></article>
+                <article class="journey-row">
+                    <div class="journey-body">
+                        <div class="journey-title">
+                            <div><h3>美和科技大學 - 資訊管理系</h3></div>
+                        </div>
+                        <p>修習程式語言與資料管理相關課程，建立資訊應用基礎。<br>實習期間接觸影片剪輯及圖片設計，累積跨領域實作經驗。
+                        </p>
+                        <div class="small-tags"><span>程式語言課程</span><span>資料管理</span><span>影像設計實習</span>
+                        </div>
+                    </div>
+                    <span class="journey-arrow" aria-hidden="true">↗</span></article>
+                <article class="journey-row">
+                    <div class="journey-body">
+                        <div class="journey-title">
+                            <div><h3>社團公關與班級幹部</h3></div>
+                        </div>
+                        <p>擔任校內社團公關二年、班級輔導幹部半年與交安幹部半年。<br>參與樂團及社團活動，累積團隊合作與溝通經驗。
+                        </p>
+                        <div class="small-tags"><span>社團公關</span><span>團隊合作</span><span>樂團參與</span></div>
+                    </div>
+                    <span class="journey-arrow" aria-hidden="true">↗</span></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills-section container" id="skills" aria-labelledby="skills-title">
+        <div class="section-top">
+            <div><h2 id="skills-title">技能與證照</h2></div>
+        </div>
+        <div class="skills-grid">
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"
+                                                                                         stroke="currentColor"
+                                                                                         stroke-width="2"><path
+                    d="M11 4h17l9 9v31H11zM28 4v10h9M18 24h12M18 31h12"/></svg></span>
+                <h3>文書與<br>試算表</h3>
+                <p>Business Application Professionals Certification Programs</p>
+                <div class="card-detail"><span>Essentials level</span><strong>Documents 2010<br>Spreadsheets
+                    2010</strong></div>
+            </article>
+            <article class="skill-card"><span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"
+                                                                                         stroke="currentColor"
+                                                                                         stroke-width="2"><rect x="5"
+                                                                                                                y="5"
+                                                                                                                width="38"
+                                                                                                                height="38"
+                                                                                                                rx="2"/><circle
+                    cx="16" cy="16" r="3"/><path d="m5 35 12-12 8 8 8-12 10 16"/></svg></span>
+                <h3>影像與<br>視覺設計</h3>
+                <div class="card-detail"><span>Adobe Certified Associate</span><strong>Visual Communication using Adobe
+                    Photoshop CS6</strong></div>
+            </article>
+        </div>
+        <div class="language-panel">
+            <div class="language-heading"><h3>語言能力</h3>
+                <p>PVQC · English Vocabulary Quotient in ICT<br>Expert — Tier Five</p></div>
+            <div class="language-score"><span>TOEIC</span>
+                <p><strong>520</strong><span>分</span></p></div>
+            <div class="language-score"><span>CSEPT 第一級</span>
+                <p><strong>205</strong><span>分</span></p></div>
+        </div>
+        <div class="qualifications-panel"><h3>其他資格</h3>
+            <p>大型重型機車駕照</p>
+            <p>普通小型車駕照</p></div>
+    </section>
+
+    <section class="section contact-section container" id="contact" aria-labelledby="contact-title">
+        <div class="section-top"><h2 id="contact-title">聯絡資訊</h2></div>
+        <div class="contact-details">
+            <div class="contact-item"><span>電子信箱</span>
+                <div class="email-row"><span class="email-address">wupsnmo26&#64;gmail.com</span>
+                    <button class="copy-email" type="button" aria-label="複製電子信箱" title="複製電子信箱"
+                            (click)="copyEmail()"><span aria-hidden="true">⧉</span></button>
+                </div>
+                <span class="copy-status" role="status" aria-live="polite">{{ copyStatus() }}</span></div>
+            <div class="contact-item"><span>聯絡電話</span>
+                <p class="contact-value">0916-567-587</p></div>
+            <div class="contact-item location-item"><span>所在地</span>
+                <p>屏東縣竹田鄉，台灣</p></div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-content"><a class="download-link" href="assets/resume.docx"
+                                             download="吳柏勳_履歷.docx">下載完整履歷 <span aria-hidden="true">↓</span></a><a
+            class="back-top" href="#home">回到頂端 <span aria-hidden="true">↑</span></a></div>
+</footer>
