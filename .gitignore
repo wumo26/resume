@@ -11,3 +11,6 @@ dist/
 *.log
 *.tar.gz
 .tmp/
+node_modules/
+.angular/
+coverage/
